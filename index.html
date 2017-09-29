@@ -7,7 +7,7 @@
   <body>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/g/react@15.3.1(react.js+react-dom.js)"></script>
     <script src="https://unpkg.com/prop-types/prop-types.min.js"></script>
-    
+
     <div id="ourFirstApp"></div>
 
     <script type="text/javascript">
@@ -35,7 +35,8 @@
 
       				)
 
-      			)
+      			),
+      			this.props.children
 
       		);
       	}
@@ -47,11 +48,54 @@
       	id: PropTypes.number.isRequired
       };
 
-      const App = React.createElement(Post, {
-      	id: 1,
-      	content: ' said: This is a post!',
-      	user: 'Mark'
-      });
+      class Comment extends React.Component {
+      	render() {
+      		return React.createElement(
+      			'div',
+      			{
+      				className: 'comment'
+      			},
+      			React.createElement(
+      				'h2',
+      				{
+      					className: 'commentAuthor'
+      				},
+      				this.props.user,
+      				React.createElement(
+      					'span',
+      					{
+      						className: 'commentContent'
+      					},
+      					this.props.content
+
+      				)
+
+      			)
+
+      		);
+      	}
+      }
+
+      Comment.propTypes = {
+      	id: PropTypes.number.isRequired,
+      	content: PropTypes.string.isRequired,
+      	user: PropTypes.string.isRequired
+      };
+
+      const App = React.createElement(
+      	Post, {
+	      	id: 1,
+	      	content: ' said: This is a post!',
+	      	user: 'Mark'
+	    },
+	    React.createElement(
+	    	Comment, {
+	    		id: 2,
+	    		user: 'bob',
+	    		content: ' commented: wow! how cool!'
+	    	})
+
+      );
       	
       ReactDOM.render(App, container);
     </script>
