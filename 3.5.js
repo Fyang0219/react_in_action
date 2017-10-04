@@ -25,7 +25,7 @@ class Counter extends React.Component {
 }
 
 Counter.defaultProps = {
-	incrementBy: 1
+	incrementBy: 2
 };
 
 Counter.propTypes = {
@@ -42,7 +42,7 @@ Counter.propTypes = {
 
 
 ReactDOM.render(
-	<Counter incrementBy={1}/>,
+	<Counter />,
 	container
 )
 
