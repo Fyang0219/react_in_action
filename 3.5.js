@@ -2,6 +2,8 @@ const container = document.getElementById('ourFirstApp');
 
 class Counter extends React.Component {
 
+	
+
 	constructor(props) {
 		super(props);
 		this.state = {
