@@ -17,7 +17,7 @@ class ParentComponent extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			text: 'give input'
+			text: 'please enter some text'
 		};
 		this.onInputChange = this.onInputChange.bind(this); 
 	}
