@@ -2,8 +2,6 @@ const container = document.getElementById('ourFirstApp');
 
 class Counter extends React.Component {
 
-	
-
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -37,7 +35,7 @@ Counter.propTypes = {
         color: React.PropTypes.string,
         fontSize: React.PropTypes.number
     }),
-    onIncrement: React.PropTypes.func.isRequired
+    // onIncrement: React.PropTypes.func.isRequired
 
 };
 
