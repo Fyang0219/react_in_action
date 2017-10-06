@@ -29,6 +29,7 @@ const ParentComponent = React.createClass({
 	},
 
 	onInputChange: function(e) {
+		console.log('Parent onChange called');
 		this.setState({text: e.target.value})
 	},
 
