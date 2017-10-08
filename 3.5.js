@@ -2,20 +2,6 @@ const container = document.getElementById('ourFirstApp');
 
 class Counter extends React.Component {
 
-	static propTypes: {
-		incrementBy: React.PropTypes.number,
-	    name: React.PropTypes.string,
-	    counterStyle: React.PropTypes.shape({
-	        color: React.PropTypes.string,
-	        fontSize: React.PropTypes.number
-	    }),
-	    onIncrement: React.PropTypes.func.isRequired
-	}
-
-	static defaultProps: {
-		incrementBy: 2
-	}
-
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -38,20 +24,20 @@ class Counter extends React.Component {
 	}
 }
 
-// Counter.defaultProps = {
-// 	incrementBy: 2
-// };
+Counter.defaultProps = {
+	incrementBy: 2
+};
 
-// Counter.propTypes = {
-//     incrementBy: React.PropTypes.number,
-//     name: React.PropTypes.string,
-//     counterStyle: React.PropTypes.shape({
-//         color: React.PropTypes.string,
-//         fontSize: React.PropTypes.number
-//     }),
-//     // onIncrement: React.PropTypes.func.isRequired
+Counter.propTypes = {
+    incrementBy: React.PropTypes.number,
+    name: React.PropTypes.string,
+    counterStyle: React.PropTypes.shape({
+        color: React.PropTypes.string,
+        fontSize: React.PropTypes.number
+    }),
+    // onIncrement: React.PropTypes.func.isRequired
 
-// };
+};
 
 
 
