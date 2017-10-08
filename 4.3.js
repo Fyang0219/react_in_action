@@ -8,7 +8,8 @@ class ChildComponent extends React.Component {
 	}
 
 	render() {
-		console.log('Child: render')
+		console.log('Child: rendered')
+
 		return (
 			<div>Props: {this.props.name}</div>
 		);
