@@ -17,7 +17,7 @@ class ChildComponent extends React.Component {
 }
 
 ChildComponent.propTypes = {
-	name: PropTypes.string.isRequired,
+	name: PropTypes.string,
 };
 
 
